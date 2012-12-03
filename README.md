@@ -26,10 +26,11 @@ If no other library is available, MultiJs falls back to [uglifier](https://githu
 
 ## TODO
 
+ - Implement report:publish rake task
+ - Add desciption and some design to report. Put it all in separate folder
  - benchmark against most popular JS frameworks (speed, size)
  - generate benchmark report (html or md)
  - write test suite
- - generate comparison table (html or md) with the help of test suite
 
 ## Contributing
 
