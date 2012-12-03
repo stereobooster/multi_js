@@ -6,6 +6,7 @@ module MultiJs
       ParseError = ::YUI::Compressor::RuntimeError
 
       def self.compile(text, options={}) #:nodoc:
+        options.delete(:inline_script)
         compressor = ::YUI::JavaScriptCompressor.new options
         compressor.compress text
       end

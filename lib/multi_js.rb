@@ -92,16 +92,11 @@ module MultiJs
       string = string.read if string.respond_to?(:read)
 
       adapter = current_adapter(options)
-      if defined?(adapter::ParseError)
-        begin
-          adapter.compile(string, options)
-        rescue adapter::ParseError => exception
-          raise ::MultiJs::ParseError.new(exception.message, exception.backtrace)
-        end
-      else
+      begin
         adapter.compile(string, options)
+      rescue adapter::ParseError => exception
+        raise ::MultiJs::ParseError.new(exception.message, exception.backtrace)
       end
     end
-
   end
 end

@@ -17,5 +17,10 @@ shared_examples_for "an adapter" do |adapter|
     it 'throws exception if parse error occurred' do
       lambda { MultiJs.compile('error statement') }.should raise_error MultiJs::ParseError
     end
+
+    it 'support :inline_script option' do
+      js = 'var a="<\/script>";'
+      MultiJs.compile(js, :inline_script => true).should eq js
+    end
   end
 end
