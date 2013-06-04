@@ -6,7 +6,7 @@ module MultiJs
       ParseError = ::Closure::Error
 
       def self.compile(text, options={}) #:nodoc:
-        options.delete(:inline_script)
+        options.delete(:output)
         compressor = ::Closure::Compiler.new options
         compressor.compile(text).chomp
       end

@@ -20,7 +20,7 @@ shared_examples_for "an adapter" do |adapter|
 
     it 'support :inline_script option' do
       js = 'var a="<\/script>";'
-      MultiJs.compile(js, :inline_script => true).should eq js
+      MultiJs.compile(js, :output => {:inline_script => true}).should eq js
     end
   end
 end

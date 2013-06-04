@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'uglifier'
+  gem.add_dependency 'uglifier', '~> 2'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rdoc'
